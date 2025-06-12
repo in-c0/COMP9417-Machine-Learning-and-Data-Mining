@@ -5,7 +5,8 @@ The mathematical structure that is trained, evaluated, and differentiated to fit
 In the process of learning, it is crucial to adjust the model to minimize the error on the training data.
 
 
-**General Structure of Machine Learning Problems**
+## General Structure of Machine Learning Problems
+
 Every supervised learning problem in machine learning can typically be broken down into three main steps:
  
 1. Select a model and an error (loss) function
@@ -13,7 +14,7 @@ Every supervised learning problem in machine learning can typically be broken do
 3. Use the trained model to predict for new, unseen data
 
 
-**Step 1: Selecting a Model**
+### Step 1: Selecting a Model
 
 The first step, selecting a model, is about defining a mathematical formula or function that maps inputs to outputs.
 
@@ -33,8 +34,14 @@ This model assumes a linear relationship between input features and output, and 
 Later on, we'll learn about neural networks that stack layers of interconnected nodes (i.e. artificial neurons) to model complex non-linear patterns.
 
 
+Selecting an error function (aka Loss function), on the other hand, is about choosing how we want the model to behave when it makes mistakes. 
 
-**Step 2: Fitting a Model**
+You know that the chosen error function is good if minimizing it leads to better performance (i.e. fewer wrong predictions, higher accuracy, lower test error). Choosing the best error function is often a matter of trial and error.  
+For example, MSE (Mean Squared Error) is sensitive to big errors. MAE (Mean Absolute Error) treats all errors equally. and Cross-entropy encourages confident classification, but may overfit if data is noisy.
+
+
+
+### Step 2: Fitting a Model
 
 To train* a model, we measure how wrong its predictions are on the training data and try to reduce that error. This process is called **Empirical Risk Minimization (ERM)**.
 
@@ -44,9 +51,7 @@ We define a **loss function** $\ell(y_i, \hat{y}_i)$ that measures how wrong the
 
 The **empirical risk** is calculated as:
 
-$$
-\mathcal{R}_{\text{emp}}(\theta) = \frac{1}{n} \sum_{i=1}^{n} \ell(y_i, \hat{y}_i)
-$$
+![image](https://github.com/user-attachments/assets/596cb984-ccc5-495f-b780-9c2e928dbc84)
 
 Where:
 - $n$ is the number of training examples  
@@ -63,20 +68,13 @@ This process is called **Empirical Risk Minimization (ERM)** — and it's at the
 
 Read more: https://en.wikipedia.org/wiki/Empirical_risk_minimization
 
+### Step 3: Making a prediction on unseen data
 
-### Covariance and Correlation
+
+## Covariance and Correlation
 ![image](https://github.com/user-attachments/assets/3f7ab23f-2394-49a5-b685-32d8987b780e)
 
-### Univariate Linear Regression
-### Multivariate Regression
-### Vectors and Matrices
-
-
-
-The second step, picking an error function (aka Loss function), is about choosing how we want the model to behave when it makes mistakes. 
-
-You know that the chosen error function is good if minimizing it leads to better performance (i.e. fewer wrong predictions, higher accuracy, lower test error). Choosing the best error function is often a matter of trial and error.  
-For example, MSE (Mean Squared Error) is sensitive to big errors. MAE (Mean Absolute Error) treats all errors equally. and Cross-entropy encourages confident classification, but may overfit if data is noisy.
-
-
+## Univariate Linear Regression
+## Multivariate Regression
+## Vectors and Matrices
 
