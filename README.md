@@ -72,7 +72,43 @@ Read more: https://en.wikipedia.org/wiki/Empirical_risk_minimization
 
 
 ## Covariance and Correlation
-![image](https://github.com/user-attachments/assets/3f7ab23f-2394-49a5-b685-32d8987b780e)
+
+
+### Covariance
+
+Covariance measures how two variables change together.
+
+- If both variables increase together, the covariance is positive.  
+- If one increases while the other decreases, the covariance is negative.  
+- If the variables do not show any consistent pattern together, the covariance is close to zero.  
+
+![image](https://github.com/user-attachments/assets/b33471e9-2d95-4e81-9df5-12c186545331)
+
+
+Correlation is the standardized version of covariance so it's always between -1 and +1.
+
+### Correlation
+
+The **correlation coefficient** is a number between **−1** and **+1** that measures how strongly two variables \(X\) and \(Y\) are related.
+
+- **+1**: Strong positive linear association  
+- **0**: No clear linear association (high scatter)  
+- **−1**: Strong negative linear association (inverse)
+
+> Interpretation:
+- High \(X\) with high \(Y\), low \(X\) with low \(Y\): positive correlation  
+- High \(X\) with low \(Y\): negative correlation  
+- Mixed pattern: weak or no correlation
+
+⚠️ **Note**: Correlation is meaningful **only if the relationship is linear**. It doesn't work well for **curved (non-linear)** associations.
+“Correlation does not imply causation”. You cannot use correlation to infer that X causes Y , or the other way around
+
+![image](https://github.com/user-attachments/assets/8cbd0b3b-baa0-471f-81fc-ee3f4ce93ef0)
+
+> Why divide by n-1 not n for sample variance ?: Check https://en.wikipedia.org/wiki/Bessel's_correction#Source_of_bias  
+
+Read more: https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
+
 
 ## Univariate Linear Regression
 ## Multivariate Regression
