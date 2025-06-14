@@ -13,7 +13,6 @@ Every supervised learning problem in machine learning can typically be broken do
 2. Fit the model to the training data by minimizing the loss
 3. Use the trained model to predict for new, unseen data
 
-
 ### Step 1: Selecting a Model
 
 The first step, selecting a model, is about defining a mathematical formula or function that maps inputs to outputs.
@@ -166,6 +165,53 @@ Shifting all data left/right (x) or up/down (y) just moves the line — it doesn
 
 The sum of the residuals (the differences between the actual and predicted values) is always zero in least-squares linear regression. The regression line balances around the mean, and the residuals cancel out like positive and negative weights.
 
-## Multivariate Regression
+## Multivariate Linear Regression
+
+Multivariate linear regression is just a linear regression with multiple input variables (features) (x_1, x_2, ... , x_p).
+
+![image](https://github.com/user-attachments/assets/48b18eab-7098-47fe-af53-95797dbba6d4)
+
+
+We have p features, plus 1 bias term (b_o), so we need to learn p + 1 parameters (weights) ... note that x_o is always 1, because x_o is just an extra term introduced to add the bias term b_o into the summation (which helps in converting to matrix form)
+
+![image](https://github.com/user-attachments/assets/e8fdadb8-5cef-4375-a774-db514aa380db)
+
+![image](https://github.com/user-attachments/assets/609cc6d1-3dba-41ca-ab9f-911287e20744)
+
+
 ## Vectors and Matrices
+
+Scalar
+Vector
+Transpose
+
+Vector Addition
+Vector Multiplication
+
+Systems of linear equations
+![image](https://github.com/user-attachments/assets/20ff096d-2913-4ba6-9892-90113b366ac1)
+![image](https://github.com/user-attachments/assets/15fae65b-effe-4262-b546-918d569120f7)
+![image](https://github.com/user-attachments/assets/ca70e3e9-d1c5-4999-a5f9-7e79b9316737)
+
+Matrices
+![image](https://github.com/user-attachments/assets/970339af-3048-453b-b365-c8a36ae3fd5e)
+![image](https://github.com/user-attachments/assets/6e06acc0-423d-4bfb-be70-2bb444b8ac9a)
+![image](https://github.com/user-attachments/assets/5555cd46-3d70-418a-bdc9-f2402a775756)
+![image](https://github.com/user-attachments/assets/4f3b6c2e-2e54-46b3-a718-c2565e7f8ea6)
+![image](https://github.com/user-attachments/assets/9ad42b1c-1c65-4083-945f-00eebc799dbb)
+![image](https://github.com/user-attachments/assets/8d5691bb-d1f1-4402-a519-942c24dd6912)
+![image](https://github.com/user-attachments/assets/9387f2f2-da27-4b8c-8eba-3f1e36e4afc5)
+![image](https://github.com/user-attachments/assets/f36c11cc-18a5-4009-a3f7-b5a849f605f8)
+
+
+Going back to the Linear regression, we can now represent the solution in terms of Matrices:
+![image](https://github.com/user-attachments/assets/3a4af207-5699-45ba-a141-551cbae90485)
+
+![image](https://github.com/user-attachments/assets/53e3fbe8-cdf3-4712-a0bb-be76b992d298)
+
+
+
+
+
+
 
