@@ -5,6 +5,12 @@ The mathematical structure that is trained, evaluated, and differentiated to fit
 In the process of learning, it is crucial to adjust the model to minimize the error on the training data.
 
 
+The first section will introduce you to machine learning approaches to the problem of numerical prediction. Following it you should be able to reproduce theoretical results, outline algorithmic techniques and describe practical applications for the topics:
+• the supervised learning task of numeric prediction  
+• how linear regression solves the problem of numeric prediction  
+• fitting linear regression by least squares error criterion
+
+
 ## General Structure of Machine Learning Problems
 
 Every supervised learning problem in machine learning can typically be broken down into three main steps:
@@ -38,7 +44,16 @@ Selecting an error function (aka Loss function), on the other hand, is about cho
 You know that the chosen error function is good if minimizing it leads to better performance (i.e. fewer wrong predictions, higher accuracy, lower test error). Choosing the best error function is often a matter of trial and error.  
 For example, MSE (Mean Squared Error) is sensitive to big errors. MAE (Mean Absolute Error) treats all errors equally. and Cross-entropy encourages confident classification, but may overfit if data is noisy.
 
+We want to minimize a loss function, so we use calculus to:
 
+- Take its derivative, and  
+- Find where it’s zero (analytical solution) or Use the gradient (partial derivatives) to step downhill (gradient descent)  
+
+If we're using MSE, it's a smooth, convex, differentiable function. 
+A squared function is convex; a sum of convex funcions is also convex, so the whole loss function is convex. Meaning anywhere the slope is zero is the global minimum. 
+Thus, it is guaranteed that taking partial derivatives of MSE and setting it to zero will give us clues about the value of a and b at the global minimum.
+
+If we're using MAE, the absolute value makes it non-differentiable at 0, so we can't solve it anlaytically, but we can use gradient-based methods which we will cover later.
 
 ### Step 2: Fitting a Model
 
@@ -165,6 +180,7 @@ Shifting all data left/right (x) or up/down (y) just moves the line — it doesn
 
 The sum of the residuals (the differences between the actual and predicted values) is always zero in least-squares linear regression. The regression line balances around the mean, and the residuals cancel out like positive and negative weights.
 
+
 ## Multivariate Linear Regression
 
 Multivariate linear regression is just a linear regression with multiple input variables (features) (x_1, x_2, ... , x_p).
@@ -209,6 +225,36 @@ Going back to the Linear regression, we can now represent the solution in terms 
 
 ![image](https://github.com/user-attachments/assets/53e3fbe8-cdf3-4712-a0bb-be76b992d298)
 
+
+---
+
+This section will introduce you to machine learning approaches to the problem of numerical prediction. Following it you should be able to reproduce theoretical results, outline algorithmic techniques and describe practical applications for the topics:
+• non-linear regression via linear-in-the-parameters models  
+• gradient descent to estimate parameters for regression  
+
+
+Bias-Variance Decomposition
+
+### Var(X) in statistics vs probability
+![image](https://github.com/user-attachments/assets/40aa1d66-9ff7-4bfb-b075-f2d1d298dbdd)
+![image](https://github.com/user-attachments/assets/c55ac88b-ca19-4f35-9544-9e2b65b47839)
+
+### Linearity of Expectation
+![image](https://github.com/user-attachments/assets/a19e775a-7373-4bc4-ac9f-a782f9ecbb9d)
+
+### Binomial Distribution
+![image](https://github.com/user-attachments/assets/d513019f-0dbb-4248-81b6-dd33ccbe8f94)
+
+### MLE (Maximum Likelihood Estimate)
+https://en.wikipedia.org/wiki/Maximum_likelihood_estimation
+
+### Continuous Distribution
+
+Bias in Multivariate Linear Regression
+
+### Regularisation
+
+### Optimization by gradient descent
 
 
 
