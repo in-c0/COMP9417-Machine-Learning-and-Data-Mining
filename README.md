@@ -71,6 +71,28 @@ Read more: https://en.wikipedia.org/wiki/Empirical_risk_minimization
 ### Step 3: Making a prediction on unseen data
 
 
+### Variance
+
+ Variance is a measure of dispersion, meaning it is a measure of how far a set of numbers is spread out from their average value. It is the second central moment of a distribution, and the covariance of the random variable with itself. Variance is denoted by symbols: ![image](https://github.com/user-attachments/assets/98c07ebe-043e-43e6-9ec1-9d43ac36d7a7)
+
+The other variance is a characteristic of a set of observations. When variance is calculated from observations, those observations are typically measured from a real-world system. If all possible observations of the system are present, then the calculated variance is called the population variance. Normally, however, only a subset is available, and the variance calculated from this is called the sample variance. The variance calculated from a sample is considered an estimate of the full population variance. 
+
+### 📊 Population vs. Sample Variance
+
+- **Population values** are theoretical and fixed.  
+- **Sample values** are calculated from data and used to estimate the population.
+
+![image](https://github.com/user-attachments/assets/76225407-d745-44ca-bd04-8ac77308f679)
+
+
+> If you're **not using all data**, treat it as a sample and apply **Bessel’s correction**: divide by \( n - 1 \), not \( n \).
+> Why divide by n-1 not n for sample variance ?: Check https://en.wikipedia.org/wiki/Bessel's_correction#Source_of_bias  
+
+![image](https://github.com/user-attachments/assets/e13a5bb0-1dfe-4dcc-bc13-4b0ea1ddd148)
+![image](https://github.com/user-attachments/assets/8cbd0b3b-baa0-471f-81fc-ee3f4ce93ef0)
+
+
+
 ## Covariance and Correlation
 
 
@@ -103,14 +125,47 @@ The **correlation coefficient** is a number between **−1** and **+1** that mea
 ⚠️ **Note**: Correlation is meaningful **only if the relationship is linear**. It doesn't work well for **curved (non-linear)** associations.
 “Correlation does not imply causation”. You cannot use correlation to infer that X causes Y , or the other way around
 
-![image](https://github.com/user-attachments/assets/8cbd0b3b-baa0-471f-81fc-ee3f4ce93ef0)
-
-> Why divide by n-1 not n for sample variance ?: Check https://en.wikipedia.org/wiki/Bessel's_correction#Source_of_bias  
 
 Read more: https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
 
 
 ## Univariate Linear Regression
+
+![image](https://github.com/user-attachments/assets/4c6a986f-a084-4e7a-bad2-d5c596a3e8b1)
+![image](https://github.com/user-attachments/assets/e443ce46-ef73-4e7a-b88b-748dfed1be40)
+
+**Quick linear algebra recap:**
+
+1. [Chain rule](https://en.wikipedia.org/wiki/Chain_rule) says, if you have a function defined as a nested function (i.e. function inside of another function, f(x) = [g(x)]^2 for example) and you're trying to differentiate it - then first take the derivative of the outer square/power (2 * g(x)), then multiply it by the derivative of the inner function (g'(x)) to get the final derivative (2*g(x)*g'(x)).
+  
+2. Whenever you take the derivative (or partial derivative), any part that doesn't contain the variable you're differentiating is treated as a constant — and its derivative is 0.
+
+3. The derivative of a sum is the sum of the derivatives.
+![image](https://github.com/user-attachments/assets/4fca031c-edff-4d48-bff9-432b72bb9a51)
+
+
+![image](https://github.com/user-attachments/assets/cbdb7c30-acf7-424a-88f5-7663e3eadbf9)
+![image](https://github.com/user-attachments/assets/06cc2c4c-3166-4401-8074-48cfde6adfd3)
+![image](https://github.com/user-attachments/assets/6f703d44-efd7-4fbe-888e-eeaf5fabd894)
+
+![image](https://github.com/user-attachments/assets/6d489754-5194-471c-a38a-097943db14ba)
+![image](https://github.com/user-attachments/assets/e36ab150-6cd6-4674-a2b6-b90f05d7383b)
+![image](https://github.com/user-attachments/assets/bddaa17c-d83f-4779-9e92-c17f0de101ab)
+![image](https://github.com/user-attachments/assets/4115b926-0b25-42b3-bb00-fecfdc962225)
+
+
+The regression line always passes through the point (x-mean, y-mean) i.e. the mean of the data, because it is mathematically the point that balances the squared errors.
+ 
+Shifting all data left/right (x) or up/down (y) just moves the line — it doesn’t change its tilt (slope). Subtracting the mean of X from X (or subtracting the mean of Y from Y) makes the intercept zero, so the regression line passes through (0, y-mean) (or (0,0) if subtracted both the mean of Y and the mean of X), instead of (x-mean, y-mean).  
+
+![image](https://github.com/user-attachments/assets/df496203-2a0e-4b5c-9d23-fe3642a16435)
+
+
+![image](https://github.com/user-attachments/assets/2e96ab46-9d6a-438b-8206-25ecfe8c6a0a)
+
+
+The sum of the residuals (the differences between the actual and predicted values) is always zero in least-squares linear regression. The regression line balances around the mean, and the residuals cancel out like positive and negative weights.
+
 ## Multivariate Regression
 ## Vectors and Matrices
 
