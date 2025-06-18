@@ -5,10 +5,14 @@ The mathematical structure that is trained, evaluated, and differentiated to fit
 In the process of learning, it is crucial to adjust the model to minimize the error on the training data.
 
 
-The first section will introduce you to machine learning approaches to the problem of numerical prediction. Following it you should be able to reproduce theoretical results, outline algorithmic techniques and describe practical applications for the topics:
+The first section will introduce you to machine learning approaches to the problem of numerical prediction. Following it you should be able to reproduce theoretical results, outline algorithmic techniques and describe practical applications for the topics:  
+
 • the supervised learning task of numeric prediction  
 • how linear regression solves the problem of numeric prediction  
-• fitting linear regression by least squares error criterion
+• fitting linear regression by least squares error criterion  
+
+
+Review [linalg-review (1).pdf](#linalg-review (1).pdf) for assumed knowledge.
 
 
 ## General Structure of Machine Learning Problems
