@@ -12,7 +12,7 @@ The first section will introduce you to machine learning approaches to the probl
 • fitting linear regression by least squares error criterion  
 
 
-Review [linalg-review (1).pdf](#linalg-review (1).pdf) for assumed knowledge.
+Review `linalg-review (1).pdf` for assumed knowledge.
 
 
 ## General Structure of Machine Learning Problems
